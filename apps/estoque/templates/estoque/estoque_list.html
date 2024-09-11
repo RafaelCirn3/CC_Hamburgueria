@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Produtos em Estoque</title>
+</head>
+<body>
+    <h1>Produtos em Estoque</h1>
+    <a href="{% url 'estoque:estoque_create' %}">Novo Produto</a>
+    <ul>
+        {% for produto in estoqueprodutos %}
+            <li>{{ produto.nome }} - <a href="{% url 'estoque:estoque_update' produto.pk %}">Editar</a> - <a href="{% url 'estoque:estoque_delete' produto.pk %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

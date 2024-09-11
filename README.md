@@ -69,4 +69,11 @@ Finalmente, inicie o servidor de desenvolvimento para ver o projeto em execuçã
 ```bash
 python manage.py runserver
 ```
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+coisas para fazer: 
+Forms, Views, Urls, Validações e Regras de Negócios nas views
 
+Sequência de apps para fazer
+- Estoque
+- Mesa
+- Produto

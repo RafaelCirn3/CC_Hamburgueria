@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Fornecedores</title>
+</head>
+<body>
+    <h1>Fornecedores</h1>
+    <a href="{% url 'estoque:fornecedor_create' %}">Novo Fornecedor</a>
+    <ul>
+        {% for fornecedor in fornecedores %}
+            <li>{{ fornecedor.nome }} - <a href="{% url 'estoque:fornecedor_update' fornecedor.pk %}">Editar</a> - <a href="{% url 'estoque:fornecedor_delete' fornecedor.pk %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
