@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+    <h1>Detalhes do Produto</h1>
+    <p>Nome: {{ estoqueprodutos.nome }}</p>
+    <p>Quantidade: {{ estoqueprodutos.quantidade }}</p>
+    <p>Preço: {{ estoqueprodutos.preco }}</p>
+    <a href="{% url 'estoque:estoque_list' %}">Voltar para a lista</a>
+</body>
+</html>

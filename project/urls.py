@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('estoque/', include('apps.estoque.urls', namespace='estoque')),
+    path('mesa/', include('apps.mesa.urls', namespace='mesa')),
 ]

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Mesas</title>
+</head>
+<body>
+    <h1>Mesas</h1>
+    <a href="{% url 'mesa:mesa_create' %}">Nova Mesa</a>
+    <ul>
+        {% for mesa in mesas %}
+            <li>{{ mesa.numero }} - <a href="{% url 'mesa:mesa_update' mesa.pk %}">Editar</a> - <a href="{% url 'mesa:mesa_delete' mesa.pk %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

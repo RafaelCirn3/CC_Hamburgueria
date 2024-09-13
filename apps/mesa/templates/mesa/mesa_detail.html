@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes da Mesa</title>
+</head>
+<body>
+    <h1>Detalhes da Mesa</h1>
+    <p>Número: {{ mesa.numero }}</p>
+    <p>Descrição: {{ mesa.descricao }}</p>
+    <a href="{% url 'mesa:mesa_list' %}">Voltar para a lista</a>
+</body>
+</html>

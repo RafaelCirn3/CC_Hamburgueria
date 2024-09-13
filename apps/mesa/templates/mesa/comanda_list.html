@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Comandas</title>
+</head>
+<body>
+    <h1>Comandas</h1>
+    <a href="{% url 'mesa:comanda_create' %}">Nova Comanda</a>
+    <ul>
+        {% for comanda in comandas %}
+            <li>{{ comanda.id }} - <a href="{% url 'mesa:comanda_detail' comanda.pk %}">Detalhes</a> - <a href="{% url 'mesa:comanda_update' comanda.pk %}">Editar</a> - <a href="{% url 'mesa:comanda_delete' comanda.pk %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Fornecedor</title>
+</head>
+<body>
+    <h1>Detalhes do Fornecedor</h1>
+    <p>Nome: {{ fornecedor.nome }}</p>
+    <p>CNPJ: {{ fornecedor.cnpj }}</p>
+    <p>Email: {{ fornecedor.email }}</p>
+    <p>Telefone: {{ fornecedor.telefone }}</p>
+    <a href="{% url 'estoque:fornecedor_list' %}">Voltar para a lista</a>
+</body>
+</html>

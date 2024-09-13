@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excluir Comanda</title>
+</head>
+<body>
+    <h1>Excluir Comanda</h1>
+    <p>Tem certeza que deseja excluir a comanda {{ comanda.id }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim</button>
+    </form>
+    <a href="{% url 'mesa:mesa_detail' mesa.id %}">Cancelar</a>
+</body>
+</html>

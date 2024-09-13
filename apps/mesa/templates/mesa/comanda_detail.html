@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes da Comanda</title>
+</head>
+<body>
+    <h1>Detalhes da Comanda</h1>
+    <p>ID: {{ comanda.id }}</p>
+    <p>Mesa: {{ comanda.mesa }}</p>
+    <p>Valor total: R$ {{ comanda.valor_total }}</p>
+    <a href="{% url 'mesa:mesa_detail' comanda.mesa.id %}">Voltar para a mesa</a>
+</body>
+</html>

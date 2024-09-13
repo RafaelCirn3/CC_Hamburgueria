@@ -1,5 +1,5 @@
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from .models import Fornecedor, EstoqueProdutos
 from .forms import FornecedorForm, EstoqueProdutosForm
 
@@ -25,6 +25,11 @@ class FornecedorDeleteView(DeleteView):
     template_name = 'estoque/fornecedor_delete.html'
     success_url = reverse_lazy('estoque:fornecedor_list')
 
+class FornecedorDetailView(DetailView):
+    model = Fornecedor
+    template_name = 'estoque/fornecedor_detail.html'
+    context_object_name = 'fornecedor'
+
 class EstoqueProdutosListView(ListView):
     model = EstoqueProdutos
     template_name = 'estoque/estoque_list.html'
@@ -46,3 +51,8 @@ class EstoqueProdutosDeleteView(DeleteView):
     model = EstoqueProdutos
     template_name = 'estoque/estoque_delete.html'
     success_url = reverse_lazy('estoque:estoque_list')
+
+class EstoqueProdutosDetailView(DetailView):
+    model = EstoqueProdutos
+    template_name = 'estoque/estoque_detail.html'
+    context_object_name = 'estoqueprodutos'
