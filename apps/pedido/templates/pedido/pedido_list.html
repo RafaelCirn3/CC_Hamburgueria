@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Pedidos</title>
+</head>
+<body>
+    <h1>Pedidos</h1>
+    <a href="{% url 'pedido:pedido_create' %}">Novo Pedido</a>
+    <ul>
+        {% for pedido in pedidos %}
+            <li> {{ pedido.comanda }} - <a href="{% url 'pedido:pedido_detail' pedido.pk %}">Detalhes</a> - <a href="{% url 'pedido:pedido_update' pedido.pk %}">Editar</a> - <a href="{% url 'pedido:pedido_delete' pedido.pk %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

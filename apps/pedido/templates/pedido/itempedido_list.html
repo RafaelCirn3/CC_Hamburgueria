@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Itens do Pedido</title>
+</head>
+<body>
+    <h1>Itens do Pedido</h1>
+    <a href="{% url 'pedido:itempedido_create' %}">Novo Item</a>
+    <ul>
+        {% for item in itenspedido %}
+            <li>{{ item.produto }} - <a href="{% url 'pedido:itempedido_detail' item.pk %}">Detalhes</a> - <a href="{% url 'pedido:itempedido_update' item.pk %}">Editar</a> - <a href="{% url 'pedido:itempedido_delete' item.pk %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

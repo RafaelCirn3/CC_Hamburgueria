@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item do Pedido</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Editar{% else %}Novo{% endif %} Item do Pedido</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'pedido:itempedido_list' %}">Cancelar</a>
+</body>
+</html>

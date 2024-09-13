@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Item do Pedido</title>
+</head>
+<body>
+    <h1>Detalhes do Item do Pedido</h1>
+    <p>Nome: {{ itempedido.produto }}</p>
+    <p>Quantidade: {{ itempedido.quantidade }}</p>
+    <a href="{% url 'pedido:itempedido_list' %}">Voltar para a lista</a>
+</body>
+</html>
