@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <a href="{% url 'produto:produto_create' %}">Novo Produto</a>
+    <ul>
+        {% for produto in produtos %}
+            <li>{{ produto.nome }} - <a href="{% url 'produto:produto_update' produto.pk %}">Editar</a> - <a href="{% url 'produto:produto_delete' produto.pk %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

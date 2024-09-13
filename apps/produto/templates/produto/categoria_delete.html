@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excluir Categoria</title>
+</head>
+<body>
+    <h1>Excluir Categoria</h1>
+    <p>Tem certeza que deseja excluir a categoria "{{ categoria.nome }}"?</p>
+    <form action="{% url 'produto:categoria_delete' categoria.pk %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Sim">
+        <a href="{% url 'produto:categoria_list' %}">Não</a>
+    </form>
+</body>
+</html>

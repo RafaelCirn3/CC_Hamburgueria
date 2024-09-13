@@ -77,3 +77,4 @@ Sequência de apps para fazer
 - Estoque
 - Mesa
 - Produto
+- Pedidos

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categoria</title>
+</head>
+<body>
+    <h1>Categoria</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'produto:categoria_list' %}">Voltar para a lista</a>
+</body>
+</html>

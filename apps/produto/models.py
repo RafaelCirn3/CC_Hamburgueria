@@ -19,7 +19,7 @@ class Produto(models.Model):
     descricao = models.TextField()
     preco = models.DecimalField(max_digits=10, decimal_places=2)
     fabricante = models.CharField(max_length=100)
-    validade = models.DateField(null=True, blank=True)
+    validade = models.DateField(null=True, blank=True)# exemplo data valida : 2021-12-31
 
     class Meta:
         verbose_name = "Produto"
