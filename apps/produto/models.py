@@ -14,6 +14,7 @@ class Categoria(models.Model):
         return f"Categoria: {self.nome}"
 
 class Produto(models.Model):
+    estoque = models.IntegerField(default=0)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
